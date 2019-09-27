@@ -1,21 +1,23 @@
-<div class="container">
-  <table class="table">
-    <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Название</th>
-      <th scope="col">Автор</th>
-      <th></th>
-      <th><a href="" class="btn">Добавить</a></th>
-    </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let book of books;let i = index;">
-        <th scope="row">{{ i }}</th>
-        <th>{{ book.name }}</th>
-        <th>{{ book.author }}</th>
-        <th><a href="#" class="btn">Изменить</a></th>
+<div class="jumbotron">
+  <div class="container">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Название</th>
+        <th scope="col">Автор</th>
+        <th></th>
+        <th><a href="" class="btn">Добавить</a></th>
       </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books;let i = index;">
+          <th scope="row">{{ i }}</th>
+          <th>{{ book.name }}</th>
+          <th>{{ book.author }}</th>
+          <th><a href="#" class="btn">Изменить</a></th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

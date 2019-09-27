@@ -1,15 +1,17 @@
-<div class="container mt-4" id="card-columns">
-    <div class="card-columns">
-      <div class="card p-2" *ngFor="let book of books">
-        <div class="class-body">
-          <h5 class="card-title">{{ book.name }}</h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Автор: {{book.author}}</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Подробнее</a>
+<div class="jumbotron">
+  <div class="container mt-4" id="card-columns">
+      <div class="card-columns">
+        <div class="card p-2" *ngFor="let book of books">
+          <div class="class-body">
+            <h5 class="card-title">{{ book.name }}</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Автор: {{book.author}}</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Подробнее</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+  </div>
 </div>
