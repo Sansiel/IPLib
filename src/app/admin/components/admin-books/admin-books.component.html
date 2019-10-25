@@ -7,15 +7,16 @@
         <th scope="col">Название</th>
         <th scope="col">Автор</th>
         <th></th>
-        <th><a href="" class="btn">Добавить</a></th>
+        <th><button class="btn btn-primary" routerLink="../add-book">Добавить</button></th>
       </tr>
       </thead>
       <tbody>
         <tr *ngFor="let book of books;let i = index;">
           <th scope="row">{{ i }}</th>
-          <th>{{ book.name }}</th>
-          <th>{{ book.author }}</th>
-          <th><a href="#" class="btn">Изменить</a></th>
+          <th>{{ book.title }}</th>
+          <th>{{ book.author.fullName }}</th>
+          <th><button class="btn btn-primary" (click)="editBook(book)">Изменить</button></th>
+          <th><button class="btn btn-danger" (click)="deleteBook(book)">Удалить</button></th>
         </tr>
       </tbody>
     </table>
