@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://52.200.110.231:80/api'
+  apiUrl: 'https://ip-lib-back.herokuapp.com/api'
   //apiUrl: 'http://localhost:8000/api'
 };
 
