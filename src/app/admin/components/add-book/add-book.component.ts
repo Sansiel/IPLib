@@ -31,9 +31,6 @@ export class AddBookComponent implements OnInit {
       id: [],
       authorId: ['', Validators.required],
       title: ['', Validators.required],
-      shortDescription: ['', Validators.required],
-      fullDescription: ['', Validators.required],
-      pageCount: ['', Validators.required],
     });
 
     this.authorService.getAll().subscribe(data => {
