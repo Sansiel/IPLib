@@ -1,0 +1,21 @@
+<div class="container">
+  <h2 class="text-center">Добавить автора</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="lastName">Фамилия:</label>
+      <input type="text" formControlName="lastName" placeholder="Фамилия" name="lastName" class="form-control" id="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">Имя:</label>
+      <input type="text" formControlName="firstName" placeholder="Имя" name="firstName" class="form-control" id="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="middleName">Отчество:</label>
+      <input formControlName="middleName" placeholder="Отчество" name="middleName" class="form-control" id="middleName">
+    </div>
+
+    <button class="btn btn-success">Добавить</button>
+  </form>
+</div>

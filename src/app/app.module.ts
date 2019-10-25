@@ -7,6 +7,7 @@ import {HomeModule} from './home/home.module';
 import {SharedModule} from './shared/shared.module';
 import {BooksModule} from './books/books.module';
 import {AdminModule} from './admin/admin.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {AdminModule} from './admin/admin.module';
     BooksModule,
     AdminModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
