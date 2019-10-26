@@ -14,26 +14,26 @@ export class AuthorService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Author[]> {
-    return this.http.get<Author[]>(`${this.apiUrl}/`).pipe(
+    return this.http.get<Author[]>(`${this.apiUrl}`).pipe(
       map(data => data.map(item => new Author().deserialize(item)))
     );
   }
 
   get(id: number): Observable<Author> {
-    return this.http.get<Author>(`${this.apiUrl}/${id}/`).pipe(
+    return this.http.get<Author>(`${this.apiUrl}/${id}`).pipe(
       map(data => new Author().deserialize(data))
     );
   }
 
   create(author: Author): Observable<Response> {
-    return this.http.post<Response>(`${this.apiUrl}/`, author);
+    return this.http.post<Response>(`${this.apiUrl}`, author);
   }
 
   update(author: Author): Observable<Response>  {
-    return this.http.put<Response>(`${this.apiUrl}/${author.id}/`, author);
+    return this.http.put<Response>(`${this.apiUrl}/${author.id}`, author);
   }
 
   delete(id: number): Observable<Response> {
-    return this.http.delete<Response>(`${this.apiUrl}/${id}/`);
+    return this.http.delete<Response>(`${this.apiUrl}/${id}`);
   }
 }

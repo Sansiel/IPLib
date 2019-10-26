@@ -14,26 +14,26 @@ export class BookService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Book[]> {
-    return this.http.get<Book[]>(`${this.apiUrl}/`).pipe(
+    return this.http.get<Book[]>(`${this.apiUrl}`).pipe(
       map(data => data.map(item => new Book().deserialize(item)))
     );
   }
 
   get(id: number): Observable<Book> {
-    return this.http.get<Book>(`${this.apiUrl}/${id}/`).pipe(
+    return this.http.get<Book>(`${this.apiUrl}/${id}`).pipe(
       map(data => new Book().deserialize(data))
     );
   }
 
   create(book: Book): Observable<Response> {
-    return this.http.post<Response>(`${this.apiUrl}/`, book);
+    return this.http.post<Response>(`${this.apiUrl}`, book);
   }
 
   update(book: Book): Observable<Response>  {
-    return this.http.put<Response>(`${this.apiUrl}/${book.id}/`, book);
+    return this.http.put<Response>(`${this.apiUrl}/${book.id}`, book);
   }
 
   delete(id: number): Observable<Response> {
-    return this.http.delete<Response>(`${this.apiUrl}/${id}/`);
+    return this.http.delete<Response>(`${this.apiUrl}/${id}`);
   }
 }
