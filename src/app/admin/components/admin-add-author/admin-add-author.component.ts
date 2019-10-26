@@ -16,9 +16,9 @@ export class AdminAddAuthorComponent implements OnInit {
   ngOnInit() {
     this.addForm = this.formBuilder.group({
       id: [],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      middleName: ['', Validators.required],
+      first_name: ['', Validators.required],
+      last_name: ['', Validators.required],
+      middle_name: ['', Validators.required],
     });
   }
 

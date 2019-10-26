@@ -4,7 +4,7 @@ import {Deserializable} from '../../shared/utils/models/deserializable.model';
 export class Book implements Deserializable {
   public id: number;
   public author: Author;
-  public name: string;
+  public title: string;
 
   public deserialize(input: any): this {
     Object.assign(this, input);
