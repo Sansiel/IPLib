@@ -13,7 +13,7 @@
     <tbody>
     <tr *ngFor="let author of authors;">
       <th scope="row">{{ author.id }}</th>
-      <th>{{ author.last-name }}</th>
+      <th>{{ author.last_name }}</th>
       <th>{{ author.first_name }}</th>
       <th>{{ author.middle_name }}</th>
       <th><button class="btn btn-primary" (click)="editAuthor(author)">Изменить</button></th>
