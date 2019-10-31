@@ -7,19 +7,21 @@ import {EditBookComponent} from './components/edit-book/edit-book.component';
 import {AdminEditAuthorComponent} from './components/admin-edit-author/admin-edit-author.component';
 import {AdminListAuthorComponent} from './components/admin-list-author/admin-list-author.component';
 import {AdminAddAuthorComponent} from './components/admin-add-author/admin-add-author.component';
+import { AuthGuardService } from '../authorization/service/auth-guard.service';
 
 
 const routes: Routes = [
   {
     path: '',
     component: AdminComponent,
+    canActivate: [AuthGuardService],
     children: [
-      { path: 'books', component: AdminBooksComponent },
-      { path: 'add-book', component: AddBookComponent },
-      { path: 'edit-book', component: EditBookComponent },
-      { path: 'edit-author', component: AdminEditAuthorComponent },
-      { path: 'list-author', component: AdminListAuthorComponent },
-      { path: 'add-author', component: AdminAddAuthorComponent },
+      { path: 'books', component: AdminBooksComponent},
+      { path: 'add-book', component: AddBookComponent},
+      { path: 'edit-book', component: EditBookComponent},
+      { path: 'edit-author', component: AdminEditAuthorComponent},
+      { path: 'author-list', component: AdminListAuthorComponent},
+      { path: 'add-author', component: AdminAddAuthorComponent},
     ]
   }
 ];

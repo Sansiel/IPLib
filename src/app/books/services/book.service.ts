@@ -9,7 +9,7 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class BookService {
-  private apiUrl = `${environment.apiUrl}/library/book`;
+  private apiUrl = `${environment.apiUrl}/api/library/book`;
 
   constructor(private http: HttpClient) { }
 

@@ -8,6 +8,7 @@ import {SharedModule} from './shared/shared.module';
 import {BooksModule} from './books/books.module';
 import {AdminModule} from './admin/admin.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminGuard }   from './admin/admin.guard';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AdminGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

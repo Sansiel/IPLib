@@ -11,6 +11,8 @@ export class AppComponent {
     {title: 'Главная', path: './', exact: true},
     {title: 'Книги', path: '/books/list'},
     {title: 'Админка', path: '/admin'},
+    {title: 'Вход', path: '/auth/signin'},
+    {title: 'Регистрация', path: '/auth/signup'},  
   ];
   public title = 'IPLib';
 }

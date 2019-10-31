@@ -22,6 +22,10 @@
         </div>
       </div>
       <hr>
+      <form *ngIf="!authService.isLoggedIn()" class="form-inline login-form">
+        <a class="btn btn-outline-white" routerLink="/auth/signin">Войти</a>
+        <a class="btn btn-outline-white" routerLink="/auth/signup">Регистрация</a>  
+      </form>
     </div>  
   </div>
 </main>

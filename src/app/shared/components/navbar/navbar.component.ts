@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import { AuthService } from '../../../authorization/service/auth.service';
+import { Router } from '@angular/router';
 
 export interface NavItem {
   title: string;
@@ -15,6 +17,14 @@ export class NavbarComponent {
   @Input() title;
   @Input() items: NavItem[];
 
+  
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    ) { }
 
-  constructor() { }
+  signOut() {
+    this.authService.signOut();
+    this.router.navigateByUrl('/');
+  }
 }

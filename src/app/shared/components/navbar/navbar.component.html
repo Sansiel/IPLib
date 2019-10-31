@@ -2,9 +2,9 @@
   <a class="navbar-brand" href="#">
     <img src="assets/img/logo.png" alt="">
     {{ title }} 
-    <form class="form-inline login-form" style="float: right">
-        <button class="btn" type="button btn-signin">Log In</button>
-      </form>
+    <form *ngIf="authService.isLoggedIn()" class="form-inline login-form">
+      <a class="btn btn-outline-white" (click)="signOut()">Выйти</a>
+  </form>
   </a>
 
   <ul class="navbar-nav mr-auto">

@@ -9,7 +9,7 @@ import {Author} from '../../books/models/author.model';
   providedIn: 'root'
 })
 export class AuthorService {
-  private apiUrl = `${environment.apiUrl}/library/author`;
+  private apiUrl = `${environment.apiUrl}/api/library/author`;
 
   constructor(private http: HttpClient) { }
 
