@@ -9,8 +9,9 @@ import { AuthService } from './auth.service';
 export class AuthGuardService implements CanActivate {
   constructor(public auth: AuthService, public router: Router) {}
   canActivate(): boolean {
-    if (!this.auth.isStaff()) {
+    if (!this.auth.isLoggedIn()) {
       this.router.navigateByUrl('/404');
+      alert("Not loged")
       return false;
     }
     return true;
