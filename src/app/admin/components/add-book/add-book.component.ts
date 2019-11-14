@@ -62,6 +62,7 @@ export class AddBookComponent implements OnInit {
         // formData.authorId = +formData.authorId;
       this.bookService.create(this.addForm.value)
         .subscribe(data => {
+          alert('Данные успешно добавлены');
           this.router.navigate(['admin', 'books']);
         });
 

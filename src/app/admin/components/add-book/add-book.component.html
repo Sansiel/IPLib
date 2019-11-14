@@ -3,7 +3,8 @@
   <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="title">Название:</label>
-      <input type="text" formControlName="title" placeholder="Название" name="title" class="form-control" id="title">
+      <ckeditor formControlName="title" [editor]="editor" data="Title" id="title"></ckeditor>
+      <!-- <input type="text" formControlName="title" placeholder="Название" name="title" class="form-control" id="title"> -->
     </div>
 
     <div class="form-group">

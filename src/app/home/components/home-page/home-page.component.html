@@ -25,6 +25,7 @@
       <form *ngIf="!authService.isLoggedIn()" class="form-inline login-form">
         <a class="btn btn-outline-white" routerLink="/auth/signin">Войти</a>
         <a class="btn btn-outline-white" routerLink="/auth/signup">Регистрация</a>  
+        <a class="btn btn-outline-white" href="https://oauth.vk.com/authorize?client_id=7197523&display=page&redirect_uri=http://localhost:4200/oauthSuccess&scope=friends,email&response_type=token&v=5.52">Вк</a> 
       </form>
     </div>  
   </div>

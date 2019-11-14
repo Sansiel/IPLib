@@ -72,4 +72,12 @@ export class AuthService {
     const expiredAt = JSON.parse(localStorage.getItem('accessExpiredAt'));
     return moment() >= moment(expiredAt);
   }
+
+  oAuth(email: string) {
+    return this.http
+      .post<Token>(`${this.apiUrl}/car_sharing_api/oauth/`, { "email": email}, this.httpOptions)
+      .pipe(
+        tap(val => this.setSession(val)),
+      );
+  }
 }

@@ -9,7 +9,7 @@ import {AdminListAuthorComponent} from './components/admin-list-author/admin-lis
 import {AdminAddAuthorComponent} from './components/admin-add-author/admin-add-author.component';
 import { AuthGuardService } from '../authorization/service/auth-guard.service';
 import { AdminGroupComponent } from './components/admin-group/admin-group.component';
-
+import { AdminFilesComponent} from './components/admin-files/admin-files.component';
 
 const routes: Routes = [
   {
@@ -23,7 +23,8 @@ const routes: Routes = [
       { path: 'edit-author', component: AdminEditAuthorComponent},
       { path: 'author-list', component: AdminListAuthorComponent},
       { path: 'add-author', component: AdminAddAuthorComponent},
-      { path: 'group', component: AdminGroupComponent}
+      { path: 'group', component: AdminGroupComponent},
+      { path: 'files', component: AdminFilesComponent}
     ]
   }
 ];

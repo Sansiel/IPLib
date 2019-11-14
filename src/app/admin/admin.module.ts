@@ -13,6 +13,7 @@ import { AdminAddAuthorComponent } from './components/admin-add-author/admin-add
 import { AdminEditAuthorComponent } from './components/admin-edit-author/admin-edit-author.component';
 import { AdminGroupComponent } from './components/admin-group/admin-group.component';
 import {CKEditorModule} from '@ckeditor/ckeditor5-angular';
+import { AdminFilesComponent } from './components/admin-files/admin-files.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {CKEditorModule} from '@ckeditor/ckeditor5-angular';
     AdminListAuthorComponent,
     AdminAddAuthorComponent,
     AdminEditAuthorComponent,
-    AdminGroupComponent
+    AdminGroupComponent,
+    AdminFilesComponent
   ],
   imports: [
     CKEditorModule,
