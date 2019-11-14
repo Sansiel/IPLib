@@ -8,7 +8,7 @@
 
     <div class="form-group">
       <label for="author">Автор:</label>
-      <select formControlName="authorId" name="author" class="form-control" id="author">
+      <select formControlName="author_id" name="author" class="form-control" id="author">
         <option *ngFor="let author of authors; let i = index" [value]="authors[i].id">
           {{authors[i].fullName}}
         </option>

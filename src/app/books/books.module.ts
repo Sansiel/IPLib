@@ -4,6 +4,7 @@ import { BookListComponent } from './book-list/book-list.component';
 import {SharedModule} from '../shared/shared.module';
 import {BooksRoutingModule} from './books-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -17,6 +18,7 @@ import {HttpClientModule} from '@angular/common/http';
     CommonModule,
     SharedModule,
     BooksRoutingModule,
+    FormsModule,
   ],
 })
 export class BooksModule { }

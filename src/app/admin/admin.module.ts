@@ -11,6 +11,7 @@ import { EditBookComponent } from './components/edit-book/edit-book.component';
 import { AdminListAuthorComponent } from './components/admin-list-author/admin-list-author.component';
 import { AdminAddAuthorComponent } from './components/admin-add-author/admin-add-author.component';
 import { AdminEditAuthorComponent } from './components/admin-edit-author/admin-edit-author.component';
+import { AdminGroupComponent } from './components/admin-group/admin-group.component';
 import {CKEditorModule} from '@ckeditor/ckeditor5-angular';
 
 
@@ -23,6 +24,7 @@ import {CKEditorModule} from '@ckeditor/ckeditor5-angular';
     AdminListAuthorComponent,
     AdminAddAuthorComponent,
     AdminEditAuthorComponent,
+    AdminGroupComponent
   ],
   imports: [
     CKEditorModule,

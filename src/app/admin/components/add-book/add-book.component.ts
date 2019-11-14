@@ -34,7 +34,7 @@ export class AddBookComponent implements OnInit {
 
     this.addForm = this.formBuilder.group({
       id: [],
-      authorId: ['', Validators.required],
+      author_id: ['', Validators.required],
       title: ['', Validators.required],
       image: ['', Validators.required],
     });
@@ -50,18 +50,23 @@ export class AddBookComponent implements OnInit {
   }
 
   onSubmit() {
+    
     this.filesUploadService.upload(this.fileToUpload)
       .subscribe(data => {
         this.fileUrl = `${environment.apiUrl + data['file']}`;
       
         this.addForm.value['image'] = this.fileUrl;
 
-        const formData = this.addForm.value;
-        formData.authorId = +formData.authorId;
-        this.bookService.create(formData)
-          .subscribe(data => {
-            this.router.navigate(['admin', 'books']);
-          });
+
+        // const formData = this.addForm.value;
+        // formData.authorId = +formData.authorId;
+      this.bookService.create(this.addForm.value)
+        .subscribe(data => {
+          this.router.navigate(['admin', 'books']);
+        });
+
+        
+        
     });
   }
 }

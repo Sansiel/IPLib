@@ -19,6 +19,12 @@ export class BookService {
     );
   }
 
+  search(query: string): Observable<Book[]> {
+    return this.http.get<Book[]>(`${this.apiUrl}?q=${query.trim()}`).pipe(
+      map(data => data.map(item => new Book().deserialize(item)))
+    );
+  }
+
   get(id: number): Observable<Book> {
     return this.http.get<Book>(`${this.apiUrl}/${id}`).pipe(
       map(data => new Book().deserialize(data))

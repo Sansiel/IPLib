@@ -8,6 +8,7 @@ import {AdminEditAuthorComponent} from './components/admin-edit-author/admin-edi
 import {AdminListAuthorComponent} from './components/admin-list-author/admin-list-author.component';
 import {AdminAddAuthorComponent} from './components/admin-add-author/admin-add-author.component';
 import { AuthGuardService } from '../authorization/service/auth-guard.service';
+import { AdminGroupComponent } from './components/admin-group/admin-group.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: 'edit-author', component: AdminEditAuthorComponent},
       { path: 'author-list', component: AdminListAuthorComponent},
       { path: 'add-author', component: AdminAddAuthorComponent},
+      { path: 'group', component: AdminGroupComponent}
     ]
   }
 ];

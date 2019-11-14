@@ -5,6 +5,7 @@ export class Book implements Deserializable {
   public id: number;
   public author: Author;
   public title: string;
+  public image: string;
 
   public deserialize(input: any): this {
     Object.assign(this, input);
